@@ -9,4 +9,7 @@ brew install libtool
 use glibtool here as brew installs libtool as glibtool to not mess around with the system libtool...
 
 
-LIBTOOL=glibtool; export LIBTOOLIZE=glibtoolize; aclocal -I /usr/local/Cellar/gettext/0.18.3.1/share/aclocal; autoheader; automake --add-missing; autoconf
+LIBTOOL=glibtool; export LIBTOOLIZE=glibtoolize; aclocal -I /usr/local/Cellar/gettext/0.18.3.1/share/aclocal; autoheader; automake --add-missing; autoconf;
+
+if fails:
+glibtoolize; autoreconf -f -i
