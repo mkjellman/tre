@@ -1,0 +1,12 @@
+QUICK NOTES ON GETTING THIS TO BUILD ON OS X (10.9 +):
+
+Standard Apple BS Distributed Developer tools won't do (per usual):
+brew install autoconf
+brew install automake
+brew install gettext
+brew install libtool
+
+use glibtool here as brew installs libtool as glibtool to not mess around with the system libtool...
+
+
+LIBTOOL=glibtool; export LIBTOOLIZE=glibtoolize; aclocal -I /usr/local/Cellar/gettext/0.18.3.1/share/aclocal; autoheader; automake --add-missing; autoconf
