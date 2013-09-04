@@ -1,5 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_INIT(TRE, 0.8.0, [tre-general@lists.laurikari.net])
+AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_SRCDIR([lib/regcomp.c])
 AC_CONFIG_AUX_DIR(utils)
 AC_CANONICAL_TARGET
@@ -514,8 +515,8 @@ fi
 AC_SYS_LARGEFILE
 
 AM_GNU_GETTEXT([external])
-AC_LIBTOOL_TAGS([])
-AC_LIBTOOL_WIN32_DLL
+#AC_LIBTOOL_TAGS([])
+#AC_LIBTOOL_WIN32_DLL
 AM_DISABLE_STATIC
 AC_PROG_LIBTOOL
 
